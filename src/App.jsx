@@ -1,17 +1,19 @@
-import Footer from "./components/Fotter"
-import Header from "./components/Header"
-import './App.css'
+// src/App.jsx
+import React from 'react';
+
+import './App.css';
+import Homepage from './components/Home';
+import Header from './components/Header'
+import Footer from './components/Footer';
+
 function App() {
-
-
   return (
-
-    <>
-    <Header/>
-    <Footer/>
-     
-    </>
-  )
+    <div className="min-h-screen bg-white">
+ <Header/>
+      <Homepage />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
