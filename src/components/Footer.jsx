@@ -36,7 +36,7 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
-      {/* Background Pattern */}
+
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
@@ -46,10 +46,10 @@ const Footer = () => {
       </div>
 
       <div className="relative">
-        {/* Main Footer Content */}
+ 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Brand Section */}
+      
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-200">
@@ -62,8 +62,7 @@ const Footer = () => {
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 Your trusted source for breaking news, in-depth analysis, and compelling stories from around the world. Stay informed, stay connected.
               </p>
-              
-              {/* Social Links */}
+    
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -77,7 +76,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Categories */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">Categories</h3>
               <ul className="space-y-3">
@@ -95,10 +93,6 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-
-       
-
-            {/* Newsletter */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">Stay Updated</h3>
               <p className="text-gray-300 text-sm mb-4">
@@ -143,8 +137,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">

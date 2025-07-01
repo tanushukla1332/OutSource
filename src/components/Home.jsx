@@ -5,7 +5,6 @@ import { Clock, User, Eye, MessageCircle, Share2, TrendingUp, Play, ChevronRight
 const Homepage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-slide for hero section
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredNews.length);
@@ -13,19 +12,7 @@ const Homepage = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Sample news data
   const featuredNews = [
-    {
-      id: 1,
-      title: "Breaking: Global Climate Summit Reaches Historic Agreement",
-      excerpt: "World leaders unite on groundbreaking climate action plan with unprecedented commitment to renewable energy transition.",
-      image: "https://images.unsplash.com/photo-1569163139394-de44cb89696d?w=800&h=400&fit=crop",
-      category: "Politics",
-      readTime: "5 min read",
-      views: "2.3k",
-      author: "Sarah Johnson",
-      date: "2 hours ago"
-    },
     {
       id: 2,
       title: "Tech Giants Announce Revolutionary AI Partnership",
@@ -94,11 +81,11 @@ const Homepage = () => {
 
   return (
     <div className="pt-20">
-      {/* Hero Section */}
+
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Featured Article */}
+    
             <div className="lg:col-span-2">
               <div className="relative group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500">
                 <div className="aspect-video overflow-hidden">
@@ -151,8 +138,7 @@ const Homepage = () => {
                   </div>
                 </div>
               </div>
-              
-              {/* Slide Indicators */}
+
               <div className="flex justify-center space-x-2 mt-6">
                 {featuredNews.map((_, index) => (
                   <button
@@ -166,7 +152,6 @@ const Homepage = () => {
               </div>
             </div>
 
-            {/* Trending Sidebar */}
             <div className="space-y-6">
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="flex items-center space-x-2 mb-6">
@@ -213,7 +198,6 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Categories Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -239,8 +223,6 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-
-      {/* Latest News Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
@@ -320,8 +302,8 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      {/* <section className="py-16 bg-gradient-to-r from-red-500 to-red-600">
+
+      <section className="py-16 bg-gradient-to-r from-red-500 to-red-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">Never Miss a Story</h2>
@@ -356,7 +338,7 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
